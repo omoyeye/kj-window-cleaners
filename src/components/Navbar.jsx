@@ -16,10 +16,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: '/#services', label: 'Services' },
-    { href: '/#pricing', label: 'Pricing' },
-    { href: '/#why-us', label: 'Why Us' },
-    { href: '/#faq', label: 'FAQ' },
+    { href: '/services', label: 'Services' },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/why-us', label: 'Why Us' },
+    { href: '/faq', label: 'FAQ' },
     { href: '/blog', label: 'Blog' },
   ];
 
@@ -42,13 +42,13 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-white/80 hover:text-white transition font-medium text-sm tracking-wide"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <ThemeToggle />
           <Link
@@ -89,14 +89,14 @@ export default function Navbar() {
       >
         <div className="px-4 pb-6 pt-2 flex flex-col gap-4">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
               className="text-white/80 hover:text-white transition font-medium py-2"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <Link
             href="/booking"
