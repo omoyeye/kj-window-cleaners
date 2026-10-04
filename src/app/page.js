@@ -1,32 +1,14 @@
 import Link from 'next/link';
 import FAQSection from '@/components/FAQSection';
-import StatsCounter from '@/components/StatsCounter';
 import Gallery from '@/components/Gallery';
 
-function StarIcon() {
-  return (
-    <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-    </svg>
-  );
-}
-
-function Stars() {
-  return (
-    <div className="flex gap-0.5">
-      {[...Array(5)].map((_, i) => (
-        <StarIcon key={i} />
-      ))}
-    </div>
-  );
-}
 
 const services = [
   {
     title: 'Exterior Window Cleaning',
     description:
       'Using the latest water-fed pole technology, we clean your exterior windows from the ground. No ladders needed for most properties, meaning a safer and more efficient clean.',
-    image: '/service-exterior.svg',
+    image: '/service-ext.jpg',
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -38,7 +20,7 @@ const services = [
     title: 'Interior Window Cleaning',
     description:
       'Our team carefully cleans all interior glass surfaces, frames, and sills by hand. We use non-toxic, quick-drying solutions that leave no residue or streaks.',
-    image: '/service-interior.svg',
+    image: '/service-int.jpg',
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
@@ -50,7 +32,7 @@ const services = [
     title: 'Full Window Clean',
     description:
       'Get the complete package with both interior and exterior cleaning. This is our most popular option and offers the best value for a total window transformation.',
-    image: '/service-full.svg',
+    image: '/service-full.jpg',
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
@@ -126,23 +108,6 @@ const features = [
   },
 ];
 
-const testimonials = [
-  {
-    text: 'K J Window Cleaners have been cleaning our windows for over a year now. They are always on time, friendly, and leave the windows absolutely spotless. Highly recommended!',
-    name: 'Sarah M.',
-    location: 'Didsbury',
-  },
-  {
-    text: 'Brilliant service at a fair price. I switched from my old window cleaner and wish I had done it sooner. The water-fed pole system they use makes such a difference.',
-    name: 'James T.',
-    location: 'Chorlton',
-  },
-  {
-    text: 'I booked a one-off deep clean before putting my house on the market, and the results were amazing. The team was professional and thorough. Will definitely use again.',
-    name: 'Linda K.',
-    location: 'Altrincham',
-  },
-];
 
 export default function Home() {
   return (
@@ -155,7 +120,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <span className="inline-block bg-white/10 text-white/90 text-sm font-medium px-4 py-1.5 rounded-full mb-8 backdrop-blur-sm">
-                Trusted by 500+ Manchester homeowners
+                Professional Window Cleaning in Manchester
               </span>
 
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -187,11 +152,14 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:block">
-              <img
-                src="/hero-illustration.svg"
-                alt="Professional window cleaning illustration"
-                className="w-full max-w-lg mx-auto drop-shadow-2xl"
-              />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/hero-bg.jpg"
+                  alt="Professional window cleaner using squeegee on glass"
+                  className="w-full max-w-lg mx-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent" />
+              </div>
             </div>
           </div>
         </div>
@@ -199,8 +167,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white dark:from-gray-950 to-transparent" />
       </section>
 
-      {/* ===== STATS COUNTER ===== */}
-      <StatsCounter />
 
       {/* ===== SERVICES ===== */}
       <section id="services" className="py-20 lg:py-28 bg-white dark:bg-gray-950">
@@ -223,11 +189,11 @@ export default function Home() {
                   s.popular ? 'ring-2 ring-accent-500/20' : ''
                 }`}
               >
-                  <div className="w-full h-40 mb-6 flex items-center justify-center bg-navy-50 dark:bg-navy-900/50 rounded-xl overflow-hidden">
+                  <div className="w-full h-48 mb-6 rounded-xl overflow-hidden">
                   <img
                     src={s.image}
                     alt={s.title}
-                    className="w-full h-full object-contain p-4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
@@ -361,21 +327,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== WHY CHOOSE US ===== */}
+      {/* ===== ABOUT / IMAGE SECTION ===== */}
+      <section className="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/about.jpg"
+                alt="Window cleaner working outdoors with squeegee"
+                className="w-full h-80 lg:h-[28rem] object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-800 dark:text-white mb-6">
+                Why Manchester Trusts K J Window Cleaners
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                We have built our reputation on reliability, quality, and honest
+                pricing. Here is what sets us apart from the rest.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {features.slice(0, 4).map((f) => (
+                  <div key={f.title} className="flex gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-accent-50 dark:bg-accent-900/30 text-accent-500 flex items-center justify-center flex-shrink-0">
+                      {f.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-navy-800 dark:text-white text-sm mb-1">
+                        {f.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                        {f.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== MORE FEATURES ===== */}
       <section id="why-us" className="py-20 lg:py-28 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-800 dark:text-white mb-4">
-              Why Manchester Trusts K J Window Cleaners
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-              We have built our reputation on reliability, quality, and honest
-              pricing. Here is what sets us apart.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f) => (
+            {features.slice(4).map((f) => (
               <div
                 key={f.title}
                 className="text-center p-6 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
@@ -395,43 +392,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS ===== */}
-      <section className="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy-800 dark:text-white mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-lg">
-              Real feedback from real Manchester homeowners.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow relative"
-              >
-                <div className="quote-mark relative mb-4 pt-6">
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed italic">
-                    {t.text}
-                  </p>
-                </div>
-                <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
-                  <div>
-                    <p className="font-heading font-semibold text-navy-800 dark:text-white">
-                      {t.name}
-                    </p>
-                    <p className="text-gray-400 dark:text-gray-500 text-sm">{t.location}</p>
-                  </div>
-                  <Stars />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== GALLERY ===== */}
       <Gallery />
@@ -466,8 +426,11 @@ export default function Home() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-accent-600 via-accent-500 to-accent-400 relative overflow-hidden">
-        <div className="absolute inset-0 hero-dots" />
+      <section className="py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/cta.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-navy-900/80" />
+        </div>
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready for Sparkling Clean Windows?
