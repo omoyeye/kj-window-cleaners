@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Large sparkling window -->
+  <rect x="100" y="50" width="200" height="200" rx="8" fill="url(#fullClean)" stroke="#64B5F6" stroke-width="2"/>
+  <line x1="200" y1="50" x2="200" y2="250" stroke="#64B5F6" stroke-width="1.5"/>
+  <line x1="100" y1="150" x2="300" y2="150" stroke="#64B5F6" stroke-width="1.5"/>
+
+  <!-- Reflection shine -->
+  <path d="M110 60 L170 60 L110 130Z" fill="white" fill-opacity="0.12"/>
+  <path d="M210 60 L270 60 L210 110Z" fill="white" fill-opacity="0.08"/>
+
+  <!-- Multiple sparkles around window -->
+  <g fill="#FFD54F">
+    <path d="M130 90l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" opacity="0.9"/>
+    <path d="M260 80l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity="0.8"/>
+    <path d="M150 180l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity="0.7"/>
+    <path d="M270 190l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" opacity="0.8"/>
+    <path d="M120 210l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" opacity="0.6"/>
+    <path d="M240 120l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" opacity="0.5"/>
+  </g>
+
+  <!-- Checkmark badge -->
+  <circle cx="310" cy="80" r="24" fill="#4CAF50" fill-opacity="0.8"/>
+  <path d="M298 80 L306 88 L322 72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Stars around -->
+  <circle cx="80" cy="90" r="3" fill="#42A5F5" fill-opacity="0.4"/>
+  <circle cx="330" cy="200" r="4" fill="#42A5F5" fill-opacity="0.3"/>
+  <circle cx="70" cy="220" r="2" fill="#42A5F5" fill-opacity="0.5"/>
+  <circle cx="340" cy="130" r="3" fill="#42A5F5" fill-opacity="0.4"/>
+
+  <!-- Circular arrows (inside + outside) -->
+  <path d="M60 150 A30 30 0 0 1 60 90" stroke="#64B5F6" stroke-width="2" fill="none" stroke-opacity="0.4"/>
+  <path d="M57 95 L60 88 L67 93" stroke="#64B5F6" stroke-width="2" fill="none" stroke-opacity="0.4"/>
+  <path d="M340 150 A30 30 0 0 0 340 210" stroke="#64B5F6" stroke-width="2" fill="none" stroke-opacity="0.4"/>
+  <path d="M343 205 L340 212 L333 207" stroke="#64B5F6" stroke-width="2" fill="none" stroke-opacity="0.4"/>
+
+  <defs>
+    <linearGradient id="fullClean" x1="100" y1="50" x2="300" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E3F2FD" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#BBDEFB" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>

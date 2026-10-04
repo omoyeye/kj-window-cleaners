@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, -apple-system, sans-serif;
+}
+
+/* Hero dot pattern */
+.hero-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.07) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Pricing table highlight */
+.pricing-popular {
+  position: relative;
+}
+.pricing-popular::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(33,150,243,0.06) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Testimonial quote decoration */
+.quote-mark::before {
+  content: '\201C';
+  font-size: 4rem;
+  line-height: 1;
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  color: rgba(33,150,243,0.15);
+  font-family: Georgia, serif;
+}
+
+/* Scroll reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Custom focus ring */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33,150,243,0.25);
+  border-color: #2196f3;
+}
+
+/* Invalid form field */
+.field-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important;
+}
+
+/* Print styles for invoice */
+@media print {
+  nav, footer, .print\\:hidden { display: none !important; }
+  body { background: white !important; }
+}
